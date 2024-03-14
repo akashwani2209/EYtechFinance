@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Generation Portal</title>
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="googledrive copy.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Contract Generation Portal</h1>
+</header>
+
+<div class="container">
+
+    <div class="main-section">
+
+        <div class="left-section">
+            <!-- Embed code for the left section goes here -->
+            <iframe src="https://il6qg2r1ute.typeform.com/to/VA0K1eC7" width="100%" height="600" frameborder="0"></iframe>
+        </div>
+
+        <div class="right-section">
+            <!-- Content for the right section goes here -->
+            <button onclick="generateContract()">Generate New Contract</button>
+           
+
+            <div id="iframeContainer" class="image-container">
+                <!-- This div is used for the generated iframe -->
+            </div>
+            <script>
+                function generateContract() {
+                    // Create a new iframe element
+                    var iframe = document.createElement('iframe');
+
+                    // Set attributes for the iframe
+                    iframe.src = "http://localhost:3002";
+                    iframe.width = "100%";
+                    iframe.height = "600";
+                    iframe.frameborder = "0";
+
+                    // Get the container div and clear its content
+                    var container = document.getElementById('iframeContainer');
+                    container.innerHTML = '';
+
+                    // Append the iframe to the container
+                    container.appendChild(iframe);
+                }
+            </script>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
